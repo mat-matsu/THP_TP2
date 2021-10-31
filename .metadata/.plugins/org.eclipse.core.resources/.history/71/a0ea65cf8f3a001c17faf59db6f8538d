@@ -1,0 +1,22 @@
+package thp.tp2.actividad3.ejercicio12;
+
+public class ImpresoraMonocromatica {
+	final private int CONSUMO_TINTA = 50;
+	final private int CONSUMO_HOJAS = 20;
+	
+	private boolean encendido;
+	private int cantidadHojas;
+	private int nivelTinta;
+	
+	public ImpresoraMonocromatica() {
+		this.encendido = false;
+		this.cantidadHojas = 0;
+		this.nivelTinta = 100;
+	}
+	
+	public void imprimir(Documento documento) {
+		System.out.println(documento);
+		this.nivelTinta -= documento.getCuerpoTextoSize()/CONSUMO_TINTA;
+		this.cantidadHojas -= documento.getCuerpoTextoSize()/CONSUMO_HOJAS;
+	}
+}

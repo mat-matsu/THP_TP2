@@ -1,0 +1,17 @@
+package thp.tp2.actividad3.ejercicio9;
+
+public class Test {
+
+	public static void main(String[] args) {
+		int nroA = 10;
+		int nroB = 3;
+		
+		Calculadora calculadora = new Calculadora();
+		
+		System.out.println(sumar(nroA, nroB));
+		System.out.println(restar);
+		System.out.println();
+		System.out.println();
+	}
+
+}

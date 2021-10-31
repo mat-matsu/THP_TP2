@@ -1,0 +1,9 @@
+package thp.tp2.actividad3.ejercicio10;
+
+public class CalculadoraDeFraccion {
+	private Fraccion fraccion;
+	
+	public double valorReal() {
+		return (double) (String.format("%.2f",this.fraccion.getNumerador()/this.fraccion.getDenominador()));
+	}
+}

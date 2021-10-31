@@ -1,0 +1,71 @@
+package thp.tp2.actividad3;
+
+import java.time.LocalDate;
+import java.time.format.DateTimeFormatter;
+
+public class CuentaBancaria {
+	private String cbu;
+	private String tipo;
+	private double saldo;
+	private LocalDateTime fechaApertura;
+	private Persona persona;
+	
+	public CuentaBancaria () {
+		this.cbu = generarCbu();
+		this.fechaApertura = obtenerFechaDeHoy();
+		this.saldo = 0;
+	}
+	
+	public CuentaBancaria (Persona persona) {
+		this.cbu = generarCbu();
+		this.saldo = 0;
+		this.fechaApertura = obtenerFechaDeHoy();
+		this.persona = persona;
+	}
+	
+	private String generarCbu() {
+		int minRandomInicio = 10;
+		int maxRandomInicio = 99;
+		int maxRandomFin = Integer.MAX_VALUE;
+		
+		String inicio = Double.toString(Math.floor(Math.random()*(maxRandomInicio-minRandomInicio+1)+minRandomInicio));
+		String medio = Double.toString(Math.floor(Math.random()*(maxRandomFin+1)));
+		String fin = Double.toString(Math.floor(Math.random()*(maxRandomFin+1)));
+		
+		return inicio + medio + fin;
+	}
+	
+	private LocalDateTime obtenerFechaDeHoy() {
+		DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd/MM/yyyy");
+		LocalDate ahora = LocalDate.now();
+		
+		return LocalDate.parse(ahora.toString(), formatter);
+	}
+	
+	public Double verSaldo() {
+		return this.saldo;
+	}
+	
+	public void depositar(Double deposito) {
+		this.saldo += deposito;
+	}
+	
+	public boolean extraer(Double extraccion) {
+		Boolean flag = false;
+		
+		if (this.saldo >= extraccion) {
+			this.saldo -= extraccion;
+			flag = true;
+		}
+		
+		return flag;
+	}
+	
+	public String getTipo() {
+		return this.tipo;
+	}
+	
+	public void setTipo(String tipo) {
+		this.tipo = tipo;
+	}
+}

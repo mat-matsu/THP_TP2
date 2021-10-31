@@ -1,0 +1,9 @@
+package thp.tp2.actividad3.ejercicio12;
+
+import java.time.LocalDate;
+
+public class Documento {
+	private LocalDate fecha;
+	private String titulo;
+	private String cuerpoTexto;
+}

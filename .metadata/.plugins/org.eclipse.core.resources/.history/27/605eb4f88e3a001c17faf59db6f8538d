@@ -1,0 +1,23 @@
+package thp.tp2.actividad3.ejercicio12;
+
+import java.time.LocalDate;
+import java.time.format.DateTimeFormatter;
+import java.time.format.DateTimeFormatterBuilder;
+
+public class Documento {
+	private LocalDate fecha;
+	private String titulo;
+	private String cuerpoTexto;
+	
+	private DateTimeFormatter formatter = new DateTimeFormatterBuilder().append(DateTimeFormatter.ofPattern("dd/MM/yyyy")).toFormatter();
+	
+	public Documento(String fecha, String titulo, String cuerpoTexto) {
+		
+	}
+	
+	private LocalDate obtenerFechaDeHoy() {
+		LocalDate ahora = LocalDate.now();
+		
+		return LocalDate.parse(ahora.format(formatter), formatter);
+	}
+}

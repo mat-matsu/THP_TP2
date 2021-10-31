@@ -1,0 +1,5 @@
+package thp.tp2.actividad3.Ejercicio6;
+
+public enum TipoCuenta {
+	CAJA_AHORRO, CUENTA_CORRIENTE;
+}

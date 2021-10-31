@@ -1,0 +1,11 @@
+package thp.tp2.actividad3.ejercicio8;
+
+public class Turnera {
+	private int turnoActual = 0;
+	
+	public Turnera() {}
+	
+	public int otorgarProximoNumero() {
+		return ++turnoActual;
+	}
+}

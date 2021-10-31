@@ -1,0 +1,15 @@
+package thp.tp2.actividad3.ejercicio14;
+
+public class Promedio {
+	private Contador contador;
+	private Acumulador acumulador;
+	
+	public Promedio() {
+		this.contador = new Contador();
+		this.acumulador = new Acumulador();
+	}
+	
+	public void incrementar(double valor) {
+		
+	}
+}

@@ -1,0 +1,13 @@
+package thp.tp2.actividad2;
+
+public class Procesador {
+	private String marca;
+	private String modelo;
+	private double temperatura;
+	
+	public Procesador(String marca, String modelo, double temperatura) {
+		this.marca = marca;
+		this.modelo = modelo;
+		this.temperatura = temperatura;
+	}
+}

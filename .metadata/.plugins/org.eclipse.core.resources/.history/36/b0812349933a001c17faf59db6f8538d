@@ -1,0 +1,9 @@
+package thp.tp2.actividad3.ejercicio14;
+
+public class Contador {
+	private int contador;
+	
+	public Contador() {
+		this.contador = 0;
+	}
+}

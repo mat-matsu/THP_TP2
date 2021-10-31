@@ -1,0 +1,17 @@
+package thp.tp2.actividad3.ejercicio12;
+
+public class ImpresoraMonocromatica {
+	private boolean encendido;
+	private int cantidadHojas;
+	private int nivelTinta;
+	
+	public ImpresoraMonocromatica() {
+		this.encendido = false;
+		this.cantidadHojas = 0;
+		this.nivelTinta = 100;
+	}
+	
+	public void imprimir(Documento documento) {
+		System.out.println(Documento);
+	}
+}

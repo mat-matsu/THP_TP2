@@ -1,0 +1,38 @@
+package thp.tp2.actividad3;
+
+public class Test {
+
+	public static void main(String[] args) {
+		String nombre, apellido, fechaNacimiento, calle, barrio;
+		int dni, altura;
+		
+		Persona persona1 = new Persona();
+		persona1.setNombre("Fulano");
+		persona1.setApellido("Gómez");
+		persona1.setDni(12345678);
+		persona1.setFechaNacimiento("01-01-1990");
+		
+		Domicilio domicilio1 = new Domicilio("Yatay", 240, "Almagro");
+		
+		persona1.setDomicilio(domicilio1);
+		
+		CuentaBancaria cuentaBancaria1 = new CuentaBancaria(persona1);
+		cuentaBancaria1.setTipo("Caja de ahorros");
+		
+		Persona persona2 = new Persona();
+		persona2.setNombre("Mengana");
+		persona2.setApellido("Torres");
+		persona2.setDni(90123456);
+		persona2.setFechaNacimiento("28-02-2000");
+		
+		Domicilio domicilio2 = new Domicilio("Yatay", 240, "Almagro");
+		
+		persona2.setDomicilio(domicilio2);
+		
+		CuentaBancaria cuentaBancaria2 = new CuentaBancaria(persona2);
+		cuentaBancaria2.setTipo("Cuenta corriente");
+		
+		
+	}
+
+}

@@ -1,0 +1,23 @@
+package thp.tp2.actividad3.ejercicio9;
+
+public class Calculadora {
+	
+	public Calculadora() {}
+	
+	public int sumar(int nroA, int nroB) {
+		
+	}
+	
+	public int restar(int nroA, int nroB) {
+		
+	}
+
+	public int multiplicar(int nroA, int nroB) {
+		
+	}
+	
+	public double dividir(int nroA, int nroB) {
+		
+	}
+	
+}

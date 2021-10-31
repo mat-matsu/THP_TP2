@@ -1,0 +1,39 @@
+package thp.tp2.actividad2.ejercicio5;
+
+public class Automovil {
+	final private int MAX_GRADOS = 90;
+	final private int VEL_PERMITIDA = 40;
+	final private int MIN_VEL = 0;
+	
+	private String marca;
+	private String modelo;
+	private String patente;
+	private double capacidadTanque;
+	private double cantidadDeCombustible;
+	private double rendimientoPorLitro;
+	
+	public Automovil(String marca, String modelo, String patente, double capacidadTanque) {
+		this.marca = marca;
+		this.modelo = modelo;
+		this.patente = patente;
+		this.capacidadTanque = capacidadTanque;
+	}
+	
+	private double calcularConsumo(double distanciaARecorrer) {
+		return distanciaARecorrer/this.rendimientoPorLitro;
+	}
+	
+	private double calcularDistancia(double litrosAConsumir) {
+		return litrosAConsumir*this.rendimientoPorLitro;
+	}
+	
+	private double consumirCombustible(double litrosCombustible) {
+		this.cantidadDeCombustible -= litrosCombustible;
+		if(this.cantidadDeCombustible < 0) {
+			this.cantidadDeCombustible = 0;
+			return this.cantidadDeCombustible;
+		}
+		return this.cantidadDeCombustible;
+		
+	}
+}

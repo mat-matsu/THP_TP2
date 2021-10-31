@@ -1,0 +1,71 @@
+package thp.tp2.actividad3;
+
+import java.time.LocalDate;
+import java.time.format.DateTimeFormatter;
+import java.time.format.DateTimeFormatterBuilder;
+
+public class Persona {
+	private int dni;
+	private String nombre;
+	private String apellido;
+	private LocalDate fechaNacimiento;
+	private Domicilio domicilio;
+	
+	private DateTimeFormatter formatter = new DateTimeFormatterBuilder().append(DateTimeFormatter.ofPattern("dd/MM/yyyy")).toFormatter();
+	
+	public Persona () {
+		
+	}
+	
+	public Persona(int dni, String nombre, String apellido, String fechaNacimiento, String calle, int altura, String barrio) {
+		this.dni = dni;
+		this.nombre = nombre;
+		this.apellido = apellido;
+		this.fechaNacimiento = LocalDate.parse(fechaNacimiento, formatter);
+		this.domicilio = new Domicilio(calle, altura, barrio);
+	}
+	
+	public int getDni () {
+		return this.dni;
+	}
+	
+	public void setDni (int dni) {
+		this.dni = dni;
+	}
+
+	public String getNombre() {
+		return nombre;
+	}
+
+	public void setNombre(String nombre) {
+		this.nombre = nombre;
+	}
+
+	public String getApellido() {
+		return apellido;
+	}
+
+	public void setApellido(String apellido) {
+		this.apellido = apellido;
+	}
+
+	public LocalDate getFechaNacimiento() {
+		return fechaNacimiento;
+	}
+
+	public void setFechaNacimiento(String fechaNacimiento) {
+		this.fechaNacimiento = LocalDate.parse(fechaNacimiento, formatter);
+	}
+
+	public Domicilio getDomicilio() {
+		return domicilio;
+	}
+
+	public void setDomicilio(Domicilio domicilio) {
+		this.domicilio = domicilio;
+	}
+	
+	
+	
+	
+}

@@ -1,0 +1,51 @@
+package thp.tp2.actividad3.ejercicio10;
+
+public class Fraccion {
+	private int numerador;
+	private int denominador;
+	
+	public Fraccion(int numerador, int denominador) {
+		this.numerador = numerador;
+		this.denominador = denominador;
+	}
+	
+	public double valorReal() {
+		return (double) (this.numerador/this.denominador);
+	}
+	
+	public Fraccion sumar(int entero) {
+		int num = this.numerador + (entero * this.denominador);
+		
+		return new Fraccion(num, this.denominador);
+	}
+	
+	public Fraccion sumar(Fraccion fraccion1, Fraccion fraccion2) {
+		int num;
+		int den;
+		
+		if (fraccion1.getDenominador()%fraccion2.getDenominador() == 0) {
+			den = fraccion1.getDenominador();
+		} else if (fraccion2.getDenominador()%fraccion1.getDenominador() == 0) {
+			den = fraccion2.getDenominador();
+		} else {
+			den = fraccion2.getDenominador() * fraccion1.getDenominador();
+		}
+		
+		num = (fraccion1.getNumerador()*(den/fraccion1.getDenominador())) + (fraccion2.getNumerador()*(den/fraccion2.getDenominador())); 
+		
+		return new Fraccion(num, den);
+	}
+	
+	public int getNumerador() {
+		return numerador;
+	}
+
+	public int getDenominador() {
+		return denominador;
+	}
+
+	@Override
+	public String toString() {
+		return this.numerador + "/" + this.denominador;
+	}
+}

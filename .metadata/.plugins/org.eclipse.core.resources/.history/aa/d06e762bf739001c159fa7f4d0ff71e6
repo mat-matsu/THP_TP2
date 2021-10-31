@@ -1,0 +1,30 @@
+package thp.tp2.actividad3.ejercicio10;
+
+public class CalculadoraDeFraccion {
+	private Fraccion fraccion;
+	
+	public double valorReal() {
+		return (double) (this.fraccion.getNumerador()/this.fraccion.getDenominador());
+	}
+	
+	public Fraccion sumar(Fraccion fraccion, int entero) {
+		int num = fraccion.getNumerador() + entero;
+		
+		return new Fraccion(num, fraccion.getDenominador());
+	}
+	
+	public Fraccion sumar(Fraccion fraccion1, Fraccion fraccion2) {
+		int num = fraccion.getNumerador() + entero;
+		int den;
+		
+		if (fraccion1.getDenominador()%fraccion2.getDenominador() == 0) {
+			
+		} else if (fraccion2.getDenominador()%fraccion1.getDenominador() == 0) {
+			
+		} else {
+			den = fraccion2.getDenominador() * fraccion1.getDenominador();
+		}
+		
+		return new Fraccion(num, den);
+	}
+}
